@@ -39,7 +39,7 @@ func (r *testRunner) Build(build *loader.AstBuild, cmdRunner loader.CmdRunner) *
 	echoError := rand.Intn(100)
 	runtime.Println("simulator " + loader.GetCurSimulator().Name() + " compile_cmd:" + loader.GetCurSimulator().CompileCmd())
 	runtime.Println("compile options :" + build.CompileOption())
-	runtime.Println("testDiscoverer"+ build.GetTestDiscoverer().Name() + " testList:" + strings.Join(build.GetTestDiscoverer().TestList(), "\n"))
+	runtime.Println("testDiscoverer" + build.GetTestDiscoverer().Name() + " testList:" + strings.Join(build.GetTestDiscoverer().TestList(), "\n"))
 	if echoError < 20 {
 		return cmdRunner(nil, "echo", " Error here ", build.Name)
 	} else {

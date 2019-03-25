@@ -1,0 +1,17 @@
+options:
+  quite_comp:
+    usage:
+      quite_comp from testSimulator
+    on_action:
+      compile_option:
+        - -quite_comp
+
+  wave:
+    usage:
+      wave from testSimulator
+    on_action:
+      compile_option:
+        - -wave
+    with_value_action:
+      compile_option:
+        - -wave $wave
